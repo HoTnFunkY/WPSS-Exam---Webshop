@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -26,18 +27,31 @@ public class Login extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Login</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Login at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        
+        //if request is not from HttpServletRequest, you should do a typecast before
+        HttpSession session = request.getSession(true);
+        //save message in session
+        session.setAttribute("helloWorld", "Hello world");
+
+        
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        
+        if("neo".equals(username)){
+            response.sendRedirect("loggedin.jsp");
+        }else{
+        /*if(df.authenticate(username, password)){
+            request.setAttribute("kayaks", df.getAllKayaks());
+            request.setAttribute("user", df.getUserFromName(username));
+            request.getRequestDispatcher("showkayaks.jsp").forward(request, response);
+            
+        }*/
+            PrintWriter out = response.getWriter();
+            out.println("Unfortunately " + username + " could not be authenticated");
+            out.close();
+        
         }
+       
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

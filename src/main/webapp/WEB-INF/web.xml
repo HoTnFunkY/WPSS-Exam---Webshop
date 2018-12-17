@@ -16,6 +16,7 @@
         <servlet-name>Register</servlet-name>
         <url-pattern>/Register</url-pattern>
     </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30

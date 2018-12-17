@@ -1,7 +1,47 @@
+<%-- 
+    Document   : loggedin
+    Created on : 17-Dec-2018, 16:00:20
+    Author     : Thomas
+--%>
+
+<%@ page import = "java.io.*,java.util.*" %>
+<%
+   // Get session creation time.
+   Date createTime = new Date(session.getCreationTime());
+   
+   // Get last access time of this Webpage.
+   Date lastAccessTime = new Date(session.getLastAccessedTime());
+
+   String title = "Welcome Back to my website";
+   Integer visitCount = new Integer(1);
+   Integer totalVisitCount = new Integer(1);
+   String visitCountKey = new String("visitCount");
+   String userIDKey = new String("userID");
+   String userID = new String("ABCD");
+
+   // Check if this is new comer on your Webpage.
+   if (session.isNew() ){
+      title = "Welcome to my website";
+      session.setAttribute(userIDKey, userID);
+      session.setAttribute(visitCountKey,  visitCount);
+   } 
+   visitCount = (Integer)session.getAttribute(visitCountKey);
+   if (visitCount==null) {
+         totalVisitCount = 1;  
+       }else{
+   totalVisitCount = visitCount + 1;
+   }
+   userID = (String)session.getAttribute(userID);
+   session.setAttribute(visitCountKey,  totalVisitCount);
+%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Author" content="Thomas Gammelby">
     <meta name="Description" content="School Project: Web Programming Client Side">
@@ -19,23 +59,24 @@
 <header id="headerindex">CodeGeek</header>
 <H1 id="h1index">Do you want to se how deep <br> the rabbit-hole goes?</H1>
 <div class="leftcolumn" id="leftbanner" style="background-image:URL(img/MatrixCode1600x900.gif)"> 
-
-    <form class="formindex" id="login" action="Login" method="POST" style="color:greenyellow">
-          
-    User Name:<br>
-    <input type="text" name="username" placeholder="username">
-    <br>
-    Password:<br>
-    <input type="text" name="password" placeholder="password">
+    <div>
+        <p>
+            <%
+            out.println(session.getAttribute("message"));
+            session.removeAttribute("message");
+            %>
+        </p>
+    </div>
+    <form class="formindex" id="logout" action="Login" method="POST" style="color:greenyellow">
     <br><br>
-  <input type="submit" value="Login">
+  <input type="submit" value="LogOut">
     </form>
 
 </div>
 
 <div class="centercolumn" id="enterleave">
     
-    <a type="button" class="button" id="enterbutton" href="Home.html"></a>  <a type="button" class="button" id="leavebutton" href="https://retronaut.com"></a>
+    <a type="button" class="button" id="enterbutton" href="home.jsp"></a>  <a type="button" class="button" id="leavebutton" href="https://retronaut.com"></a>
 </div>
 
 <form id="accept" action="">
@@ -49,28 +90,8 @@
 </form>
 
 <div class="rightcolumn" id="rightbanner" style="background-image:URL(img/MatrixCode1600x900.gif)"> 
-
-<form class="formindex" id="register" action="Register" method="POST" style="color:greenyellow; margin:0% 50% 0% 50%;">
-          
-    User Name:<br>
-    <input type="text" name="username" value="MickeyMouse">
-    <br>
-    First Name:<br>
-    <input type="text" name="fname" value="Mickey">
-    <br>
-    Last Name:<br>
-    <input type="text" name="lname" value="Mouse">
-    <br>
-    Password:<br>
-    <input type="text" name="password" value="Mimi">
-    <br>
-    Email:<br>
-    <input type="text" name="email" value="shit@my.place">
-    <br><br>
-  <input type="submit" value="Register">
-</form>
-    
 </div>
+
 <footer>
     Copyright Technophobe ©2018
     <br>
