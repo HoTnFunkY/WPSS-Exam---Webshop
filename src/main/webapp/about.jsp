@@ -67,66 +67,30 @@
 </div>
 
 <div class="centercolumn" id="aboutcontent">
-    <h1 class="h1about">What is a mad hatter <br> And how did it all start.</h1>
+    <h1 class="h1about">Skills & Tools <br> Used to create this project</h1>
 
     <h2>What we are about</h2>
     <h3>Our vision - AI everywhere advancing humankind.</h3>
     <p>
-        <p>Our main goal is. To Provides an operational AI platform for producing real-world AI applications at scale and at speed. It’s user-friendly, intuitive and end-to-end.</p>
-
-        AI is the most transformative technology of this century.
-        Every positive leap for mankind has been fueled by intelligence - technical revolutions as well as achievements in sustainability, business or democracy.
-        Now with the advent of AI we give ourselves the opportunity to massively expand out intelligence.
-        Our lives are already being dramatically improved by the technology. From healthcare to transportation, from weather predictions to preventing crop diseases.
-        But that’s just the start. AI will enable businesses and organisations to provide context and understanding for what can seem like random connections.
-        AI allows for the cross-pollination of businesses and processes across industries. It creates new, faster, better, more efficient ways of what we are already doing
-        and finds new ways to solve real-world problems.
-        It’s fueling a new pace of innovation that will, and is, advancing humankind. That’s why we believe in the good of AI.</p>
-    <h2>What is AI</h2>
+        <p></h2>
     <h3>Artificial intelligence </h3>
     <p>
-        AI sometimes called machine intelligence, is intelligence demonstrated by machines, in contrast to the natural
-        intelligence displayed by humans and other animals.
-        In computer science AI research is defined as the study of "intelligent agents": any device that perceives its
-        environment and takes actions that maximize its chance
-        of successfully achieving its goals.[1] Colloquially, the term "artificial intelligence" is applied when a
-        machine mimics "cognitive" functions that humans associate with other human minds,
-        such as "learning" and "problem solving".[2]
+        
 
-    <p>The scope of AI is disputed: as machines become increasingly capable, tasks considered as requiring "intelligence" are often removed from the definition, a phenomenon known as the AI effect,
-        leading to the quip, "AI is whatever hasn't been done yet."[3][citation not found] For instance, optical character recognition is frequently excluded from "artificial intelligence",
-        having become a routine technology.[4] Modern machine capabilities generally classified as AI include successfully understanding human speech,[5] competing at the highest level
-        in strategic game systems (such as chess and Go),[6] autonomously operating cars, and intelligent routing in content delivery networks and military simulations.</p>
+    <p></p>
 
-    <p>Artificial intelligence was founded as an academic discipline in 1956, and in the years since has experienced several waves of optimism,[7][8] followed by disappointment and the loss
-        of funding (known as an "AI winter"),[9][10] followed by new approaches, success and renewed funding.[8][11] For most of its history, AI research has been divided into subfields
-        that often fail to communicate with each other.[12] These sub-fields are based on technical considerations, such as particular goals (e.g. "robotics" or "machine learning"),
-        [13] the use of particular tools ("logic" or artificial neural networks), or deep philosophical differences.[14][15][16] Subfields have also been based on social factors
-        (particular institutions or the work of particular researchers).[12]</p>
+    <p></p>
 
-    <p>The traditional problems (or goals) of AI research include reasoning, knowledge representation, planning, learning, natural language processing, perception and the ability to
-        move and manipulate objects.[13] General intelligence is among the field's long-term goals.[17] Approaches include statistical methods, computational intelligence, and traditional symbolic AI.
-        Many tools are used in AI, including versions of search and mathematical optimization, artificial neural networks, and methods based on statistics, probability and economics.
-        The AI field draws upon computer science, information engineering, mathematics, psychology, linguistics, philosophy, and many others.</p>
+    <p></p>
 
-    <p>The field was founded on the claim that human intelligence "can be so precisely described that a machine can be made to simulate it".[18] This raises philosophical arguments
-        about the nature of the mind and the ethics of creating artificial beings endowed with human-like intelligence which are issues that have been explored by myth,
-        fiction and philosophy since antiquity.[19] Some people also consider AI to be a danger to humanity if it progresses unabated.[20] Others believe that AI,
-        unlike previous technological revolutions, will create a risk of mass unemployment.[21]</p>
+    <p></p>
 
-    <p>In the twenty-first century, AI techniques have experienced a resurgence following concurrent advances in computer power, large amounts of data, and theoretical understanding;
-        and AI techniques have become an essential part of the technology industry, helping to solve many challenging problems in computer science, software engineering and operations research.[22][11]</p>
-    <h2>Our History</h2>
-    <h3>Our mission - to make AI technology useable and affordable for all</h3>
+    <p></p>
+    <h2></h2>
+    <h3></h3>
     <p>
-        In 2006, we launched our first product, Synapse, a Windows-based tool to help organisations design and train neural networks. Working closely with hundreds of businesses gave us a wealth of insight into how AI and deep learning could be used practically to solve real-world problems.
-
-        We also learnt a lot about the barriers that prevented most organisations from using AI: the skills needed were very scarce, and therefore very expensive, and the technical and infrastructure requirements were extremely complex.
-
-        This problem remains. Although we have now many more tools, some of which are free and open-sourced. But for AI to be useable to the many it needs to be able to solve real-world problems.
-
-        It must be made operational. That is, usable and affordable.</p>
-    <h2>The Future</h2>
+    </p>
+    <h2></h2>
     <p></p>
 
 </div>

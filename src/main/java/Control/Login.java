@@ -34,23 +34,13 @@ public class Login extends HttpServlet {
         
         boolean isAuthenticated = um.authenticateUser(username, password);
         if(isAuthenticated){
-            response.getWriter().print("Du er nu logget ind");
-            PrintWriter out = response.getWriter();
+            
             request.setAttribute("user",username);
             request.getRequestDispatcher("loggedin.jsp").forward(request, response);
         }else{
             response.getWriter().print("Unfortunately " + username + " could not be logged in, try a different user name or password");
         }
         
-        //if("neo".equals(username)){
-          //  response.sendRedirect("loggedin.jsp");
-        //}else{
-        
-          //  PrintWriter out = response.getWriter();
-            //out.println("Unfortunately " + username + " could not be authenticated");
-            //out.close();
-        
-        //}
     }
 
    
