@@ -29,7 +29,20 @@
         <a class="active"><i class="fa fa-info"></i></a>
         <a href="#"><i class="fa fa-shopping-bag"></i></a>
         
+        <form class="formindex" id="logout" action="LogOut" method="GET" style="color:greenyellow">
+        <input type="submit" value="LogOut">
+        </form>
+        
+        <div style="color: greenyellow; text-align: right;">
+            <%
+            
+            out.println("Logged in as: " + session.getAttribute("user"));
+            
+            %>
+        </div>
     </div>
+    
+    
 </nav>
 
 <div class="leftcolumn" id="aboutlcolumn">

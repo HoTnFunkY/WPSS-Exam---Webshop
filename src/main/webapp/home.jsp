@@ -56,17 +56,34 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <title>CodeGeek-Home</title>
 </head>
+
+
 <body>
+    <%
+    if (session.getAttribute("user")== null) {
+        response.sendRedirect("index.html");
+    }
+    %>
 <header id="headerhome">CodeGeek</header>
 <nav>
     <div class="icon-bar" style="text-align: center;">
         <a class="active"><i class="fa fa-home"></i></a>
-        <a href="About.html"><i class="fa fa-info"></i></a>
+        <a href="about.jsp"><i class="fa fa-info"></i></a>
         <a href="#"><i class="fa fa-shopping-bag"></i></a>
     </div>
 </nav>
 
 <div class="leftcolumn" id="homelcolumn">
+    <div style="color: greenyellow">
+            <%
+            
+            out.println("Logged in as: " + session.getAttribute("user"));
+            
+            %>
+            <form class="formindex" id="logout" action="LogOut" method="GET" style="color:greenyellow">
+                <input type="submit" value="LogOut">
+            </form>
+    </div>
     <p>
         Shopping Cart List
     </p>

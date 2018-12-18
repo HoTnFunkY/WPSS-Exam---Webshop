@@ -94,7 +94,7 @@ button, .button:hover{background: #88ba1c;}
 
 
 }
-#leftbanner{float:left; height: 100%;  width:20%; background-color:ghostwhite; z-index:1; border:none; border-right-color:unset; background-size: cover;}
+#leftbanner{float:left; height: 100%;  width:20%; background-color:ghostwhite; z-index:1; border:none; border-right-color:unset; background-size: cover; opacity: 1;}
 #rightbanner{float:right; height: 100%;   width:20%; background-color:ghostwhite; z-index:1; border:none; border-left-color:unset;}
 
 #leftbanner img {height:100%; width:100%; object-fit:cover;}

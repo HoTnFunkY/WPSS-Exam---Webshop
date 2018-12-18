@@ -33,14 +33,15 @@ function verify() {
 $(document).ready(function(){
     var ul = $("#shoppinglist");
 
-    $("button.buybutton").on({
+    $(".buybutton").on({
 
         click: function(){
             var idtext = $(this).prev().text();
             var idtxt = idtext.toString();
-            var li = $("<li>idtxt</li>");
-            ul.append(li);
-            // Er fejl i, den får fat i objected or ikke stringen...
+            var li = $("<li></li>");
+            $("ul").append(li);
+            $("#shoppinglist li:last").text(idtext);
+            //Tilføjer et <li> element, da ligger sidst i listen kan jeg derter tilføje "innerHTML" fra "previous" elemnet til knappen som er ID'et.
         }
     });
 });

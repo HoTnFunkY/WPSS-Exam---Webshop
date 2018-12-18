@@ -15,6 +15,43 @@
     <title>CodeGeek-Enter The Rabbit Hole</title>
 </head>
 
+<script> 
+function validate()
+{ 
+ var firstname = document.form.firstname.value;
+ var email = document.form.email.value;
+ var username = document.form.username.value; 
+ var password = document.form.password.value;
+ var lastname= document.form.lastname.value;
+ 
+ if (firstname==null || firstname=="")
+ { 
+ alert("First Name can't be blank"); 
+ return false; 
+ }
+ else if (email==null || email=="")
+ { 
+ alert("Email can't be blank"); 
+ return false; 
+ }
+ else if (username==null || username=="")
+ { 
+ alert("Username can't be blank"); 
+ return false; 
+ }
+ else if(password.length<6)
+ { 
+ alert("Password must be at least 6 characters long."); 
+ return false; 
+ } 
+ else if (lastname==null || lastname=="")
+ { 
+ alert("Last name cant's be blanc"); 
+ return false; 
+ } 
+ } 
+</script> 
+
 <body>
 <header id="headerindex">CodeGeek</header>
 <H1 id="h1index">Do you want to se how deep <br> the rabbit-hole goes?</H1>
@@ -50,24 +87,37 @@
 
 <div class="rightcolumn" id="rightbanner" style="background-image:URL(img/MatrixCode1600x900.gif)"> 
 
-<form class="formindex" id="register" action="Register" method="POST" style="color:greenyellow; margin:0% 50% 0% 50%;">
-          
-    User Name:<br>
-    <input type="text" name="username" value="MickeyMouse">
-    <br>
-    First Name:<br>
-    <input type="text" name="fname" value="Mickey">
-    <br>
-    Last Name:<br>
-    <input type="text" name="lname" value="Mouse">
-    <br>
-    Password:<br>
-    <input type="text" name="password" value="Mimi">
-    <br>
-    Email:<br>
-    <input type="text" name="email" value="shit@my.place">
-    <br><br>
-  <input type="submit" value="Register">
+        
+    <form name="form" action="Register" method="POST" onsubmit="return validate()" style="color:greenyellow;">
+<table align="left">
+ <tr>
+ <td>User Name</td>
+ <td><input type="text" name="username" /></td>
+ </tr>
+ <tr>
+ <td>First Name</td>
+ <td><input type="text" name="firstname" /></td>
+ </tr>
+ <tr>
+ <td>Last Name</td>
+ <td><input type="text" name="lastname" /></td>
+ </tr>
+ <tr>
+ <td>Password</td>
+ <td><input type="password" name="password" /></td>
+ </tr>
+ <tr>
+ <td>Email</td>
+ <td><input type="text" name="email" /></td>
+ </tr>
+ <tr>
+ </tr>
+ <tr>
+ <td></td>
+ <td><input type="submit" value="Register"></input><input
+ type="reset" value="Reset"></input></td>
+ </tr>
+</table>
 </form>
     
 </div>
@@ -82,3 +132,4 @@
 
 </body>
 </html>
+

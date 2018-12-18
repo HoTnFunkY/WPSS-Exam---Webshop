@@ -6,6 +6,7 @@
 
 <%@ page import = "java.io.*,java.util.*" %>
 <%
+   
    // Get session creation time.
    Date createTime = new Date(session.getCreationTime());
    
@@ -35,6 +36,12 @@
    session.setAttribute(visitCountKey,  totalVisitCount);
 %>
 
+<%
+if (session.getAttribute("user")== null) {
+        response.sendRedirect("index.html");
+    }
+%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -59,19 +66,19 @@
 <header id="headerindex">CodeGeek</header>
 <H1 id="h1index">Do you want to se how deep <br> the rabbit-hole goes?</H1>
 <div class="leftcolumn" id="leftbanner" style="background-image:URL(img/MatrixCode1600x900.gif)"> 
-    <div>
-        <p>
-            <%
-            out.println(session.getAttribute("message"));
-            session.removeAttribute("message");
-            %>
-        </p>
-    </div>
-    <form class="formindex" id="logout" action="Login" method="POST" style="color:greenyellow">
-    <br><br>
-  <input type="submit" value="LogOut">
+    
+    <form class="formindex" id="logout" action="LogOut" method="GET" style="color:greenyellow">
+        <br><br>
+        <input type="submit" value="LogOut">
     </form>
-
+    
+    <div style="color: greenyellow">
+            <%
+            
+            out.println("Welcome Back: " + session.getAttribute("user"));
+            
+            %>
+    </div>
 </div>
 
 <div class="centercolumn" id="enterleave">

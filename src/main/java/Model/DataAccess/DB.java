@@ -31,17 +31,4 @@ public class DB {
         return conn;
     }
     
-    public static void main(String[] args) throws SQLException {
-        Statement stmt = getConnection().createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT * FROM user");
-        while(rs.next()){
-            int id = rs.getInt("id");
-            String username = rs.getString("user_name");
-            String password = rs.getString("password");
-            System.out.println(id+":"+username+":"+password);
-        }
-    }
-    
 }
-    
-
